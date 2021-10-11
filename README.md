@@ -67,8 +67,6 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 └── configs
 │   └── openapi.yml
 │   └── serverless.yml
-│   └── .env
-│   └── .docker-compose.yml
 └── cmd
 │   └── cmd.pgMigration.go
 │   └── cmd.pgSeeds.go
