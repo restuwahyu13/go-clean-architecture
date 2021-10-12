@@ -154,7 +154,7 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 - #### Scripts
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                   |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Scripts*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi dari fungsi lain seperti importing database, dari file .sql kedalam sebuah container menggunakan docker, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Scripts*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi dari fungsi lain, seperti importing database dari file .sql kedalam sebuah wadah container menggunakan docker, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Configs
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                            |
