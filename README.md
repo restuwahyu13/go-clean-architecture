@@ -4,12 +4,12 @@ The following is a folder structure pattern that I usually use, although I don't
 
 ## What are the benefits ?
 
-[x] Easy to maintance 
-[x] Easy to scalable you project
-[x] Readable code
-[x] Suitable for large projects or small projects
-[x] Easy to understand for junior or senior
-[x] And more
+- [x] Easy to maintance 
+- [x] Easy to scalable you project
+- [x] Readable code
+- [x] Suitable for large projects or small projects
+- [x] Easy to understand for junior or senior
+- [x] And more
 
 ## Flow Diagram
 
