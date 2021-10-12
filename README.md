@@ -2,7 +2,7 @@
 
 The following is a folder structure pattern that I usually use, although I don't use all of them because of the project I'm working on only small projects that are not too big, so if you are interested in the pattern I made, you can use it if you think it's good.
 
-## What are the benefits ?
+## What Are The Benefits ?
 
 - [x] Easy to maintance 
 - [x] Easy to scalable you project
