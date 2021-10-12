@@ -25,7 +25,7 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 │   └── student
 │   │     └── handler.create.go
 │   │     └── handler.create.go
-└── repository
+└── repositorys
 │   └── auth
 │   │     └── repository.login.go
 │   │     └── repository.register.go
