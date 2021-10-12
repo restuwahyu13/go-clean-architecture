@@ -9,12 +9,11 @@ The following is a folder structure pattern that I usually use, although I don't
 [x] Readable code
 [x] Suitable for large projects or small projects
 [x] Easy to understand for junior or senior
-[x] Familiar structure folder for any developer 
 [x] And more
 
 ## Flow Diagram
 
-<img src="./diagram.png" alt="diagram"/>
+<img src="./diagram.png" alt="flow-diagram"/>
 
 ## Folder Structure Pattern
 
@@ -103,87 +102,87 @@ The following is a folder structure pattern that I usually use, although I don't
 - #### Tests
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                         |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Tests*         | *Optional*        | *Kumpulan fungsi yang digunakan untuk membuat serangkaian test atau menjalankan sebuah test, baik itu unit testing atau integration testing, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Tests*         | *Optional*        | *A collection of functions used to create a series of tests or run a test, be it unit testing or integration testing, which will later be used for the application itself.* | 
 
 - #### Docker   
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                   |
 | --------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Docker*        | *Optional*        | *Kumpulan fungsi yang digunakan untuk membuat sebuah wadah container untuk aplikasi yang telah dibuat, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Docker*        | *Optional*        | *A collection of functions that are used to create a container for the application that has been created, which will later be used for the application itself.* | 
 
 - #### Handlers
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                                                                   |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Hanlders*      | *Optional*        | *Kumpulan fungsi yang digunakan untuk menghandle semua request yang di kirimkan dari client melalui routing, dimana nanti requestnya tersebut akan di teruskan ke service dan repository untuk di proses lebih lanjut, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Hanlders*      | *Optional*        | *A collection of functions used to handle all requests passed down from the client via routing, where later those requests will be forwarded to services and repositories for further processing, which will later be used for the application itself.* | 
 
 - #### Repositorys  
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                                         |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Repositorys*   | *Required*        | *Kumpulan fungsi yang digunakan untuk menghandle semua request yang diberikan dari handlers dan services, yang kemudian request tersebut akan digunakan untuk berkomunikasi dengan database, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Repositorys*   | *Required*        | *A collection of functions used to handle all requests given from handlers and services, which then those requests will be used to communicate with the database, which will later be used for the application itself.* | 
 
 - #### Services
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                  |
 | --------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Services*      | *Required*        | *Kumpulan fungsi yang digunakan untuk meneruskan request yang diberikan oleh handlers ke repositorys, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Services*      | *Required*        | *A collection of functions that are used to forward requests given by handlers to repositories, which will later be used for the application itself.* | 
 
 - #### Helpers
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                            |
 | --------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Helpers*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk membuat utilitas untuk keperluan aplikasi seperti customError atau customResponse, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Helpers*       | *Optional*        | *A collection of functions used to create utilities for application purposes, such as customError or customResponse, which will later be used for the application itself.* | 
 
 - #### Middlewares
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                                                                 |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Middlewares*   | *Optional*        | *Kumpulan fungsi yang digunakan sebagai layanan keperluan Http Request seperti authJWt, authRole, customLogger baik itu digunakan per-route atau digunakan secara global tanpa perlu menggunakannya di setiap route, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Middlewares*   | *Optional*        | *A collection of functions that are used as a service for HTTP Requests such as authJWt, authRole, customLogger whether used per-route or used globally without the need to use them in each route, which will later be used for the application itself.* | 
 
 - #### Models 
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                           |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Models*        | *Required*        | *Kumpulan fungsi yang digunakan untuk merepresentasikan structure table dalam sebuah database, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Models*        | *Required*        | *A collection of functions used to represent the table structure in a database, which will later be used for the application itself.* | 
 
 - #### Routes
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                    |
 | --------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Routes*        | *Required*        | *Kumpulan endpoint atau alamat dari server itu sendiri, yang digunakan untuk jalur komunikasi antara client dan server, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Routes*        | *Required*        | *A collection of endpoints or addresses from the server itself, which is used for communication lines between the client and the server, which will later be used for the application itself.* | 
 
 - #### Schemas
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                              |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| *Schemas*       | *Required*        | *Kumpulan fungsi yang digunakan untuk merepresentasikan structure request yang di inginkan, sesuai dengan request yang di perlukan oleh database, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Schemas*       | *Required*        | *A collection of functions that are used to represent the desired request structure, according to the requests required by the database, which will later be used for the application itself.* | 
 
 - #### Templates
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                             |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Templates*     | *Optional*        | *Kumpulan fungsi yang digunakan untuk menampilkan sebuah code html kedalam sebuah email untuk dijadikan sebagai template, yang nantinya akan digunakan untuk keperluan seperti activationCode atau resetPassword, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Templates*     | *Optional*        | *A collection of functions that are used to output HTML code into emails to be used as templates, which will later be used for purposes such as activationCode or resetPassword, which will later be used for the application itself.* | 
 
 - #### Pkg
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                 |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Pkg*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk keperluan customisasi sebuah library menjadi sebuah fungsi - fungsi tersendiri, yang nantinya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Pkg*           | *Optional*        | *A collection of functions that are used for the purpose of customizing a library into a separate function, which will later be used for the application itself.* |
 
 - #### Scripts
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                   |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Scripts*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi dari fungsi lain, seperti importing database dari file .sql kedalam sebuah wadah container menggunakan docker, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Scripts*       | *Optional*        | *A collection of functions that are used to trigger a function from another function, such as importing a database from a .sql file into a container using docker, which will later be used for the application itself.* | 
 
 - #### Configs
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                            |
 | --------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Configs*       | *Optional*        | *Kumpulan fungsi yang berisikan semua konfigurasi terkait keperluan aplikasi, seperti .env atau serverless.yml, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Configs*       | *Optional*        | *A collection of functions that contains all the configurations related to the application needs, such as .env or serverless.yml, which will later be used for the application itself.* | 
 
 - #### Cmd
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                       |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Cmd*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk berinteraksi secara langsung dengan terminal, biasa nya digunakan untuk keperluan seperti menjalankan migration database atau seeds, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Cmd*           | *Optional*        | *A collection of functions that are used to interact directly with the terminal, usually used for purposes such as running database migrations or seeds, which will later be used for the application itself.* | 
 
 - #### Crons
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                         |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Crons*         | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi yang di inginkan, sesuai dengan waktu yang telah di tentukan oleh si pengguna, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Crons*         | *Optional*        | *A collection of functions that are used to trigger a desired function, according to the time specified by the user, which will later be used for the application itself.* | 
 
 - #### Databases
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                       |
 | --------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Databases*     | *Optional*        | *Kumpulan fungsi yang digunakan untuk membuat sebuah migrations atau seeds untuk database, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Databases*     | *Optional*        | *A collection of functions used to create migrations or seeds for the database, which will later be used for the application itself.* | 
 
 
 ## Command
