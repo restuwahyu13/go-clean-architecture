@@ -119,7 +119,7 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 - #### Helpers
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                            |
 | --------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Helpers*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk utilitas keperluan pada aplikasi seperti customError atau customResponse, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Helpers*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk membuat utilitas untuk keperluan aplikasi seperti customError atau customResponse, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Middlewares
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                                                                 |
