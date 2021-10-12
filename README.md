@@ -3,6 +3,10 @@
 Berikut ini adalah folder structure pattern yang biasa saya gunakan, walaupun tidak semua nya saya terapkan dikarenakan project yang saya kerjakan
 hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertarik dengan pattern yang saya buat ini anda bisa menggunakan nya jika menurut anda baik.
 
+## Flow Diagram
+
+<img src="./diagram.png" alt="diagram"/>
+
 ## Structure Folder Pattern
 
 ```
