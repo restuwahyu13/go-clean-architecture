@@ -124,7 +124,7 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 - #### Middlewares
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                                                                 |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Middlewares*   | *optional*        | *Kumpulan fungsi yang digunakan sebagai layanan keperluan Http Request seperti authJWt, authRole, customLogger baik itu digunakan per-route atau digunakan secara global tanpa perlu menggunakannya di setiap route, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Middlewares*   | *Optional*        | *Kumpulan fungsi yang digunakan sebagai layanan keperluan Http Request seperti authJWt, authRole, customLogger baik itu digunakan per-route atau digunakan secara global tanpa perlu menggunakannya di setiap route, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Models 
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                           |
@@ -149,22 +149,22 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 - #### Pkg
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                 |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *pkg*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk keperluan customisasi sebuah library menjadi sebuah fungsi - fungsi tersendiri, yang nantinya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Pkg*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk keperluan customisasi sebuah library menjadi sebuah fungsi - fungsi tersendiri, yang nantinya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Scripts
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                   |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *scripts*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi dari fungsi lain seperti importing database, dari file .sql kedalam sebuah container menggunakan docker, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Scripts*       | *Optional*        | *Kumpulan fungsi yang digunakan untuk mentriger sebuah fungsi dari fungsi lain seperti importing database, dari file .sql kedalam sebuah container menggunakan docker, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Configs
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                            |
 | --------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *configs*       | *Optional*        | *Kumpulan fungsi yang berisikan semua konfigurasi terkait keperluan aplikasi, seperti .env atau serverless.yml, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Configs*       | *Optional*        | *Kumpulan fungsi yang berisikan semua konfigurasi terkait keperluan aplikasi, seperti .env atau serverless.yml, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Cmd
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                       |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *cmd*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk berinteraksi secara langsung dengan terminal, biasa nya digunakan untuk keperluan seperti menjalankan migration database atau seeds, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Cmd*           | *Optional*        | *Kumpulan fungsi yang digunakan untuk berinteraksi secara langsung dengan terminal, biasa nya digunakan untuk keperluan seperti menjalankan migration database atau seeds, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Crons
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                         |
