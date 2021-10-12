@@ -144,7 +144,7 @@ hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertar
 - #### Templates
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                                                                             |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Templates*     | *Optional*        | *Kumpulan fungsi yang digunakan untuk menampilkan sebuah code html kedalam sebuah email, yang nantinya akan digunakan untuk keperluan seperti activationCode atau resetPassword, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
+| *Templates*     | *Optional*        | *Kumpulan fungsi yang digunakan untuk menampilkan sebuah code html kedalam sebuah email untuk dijadikan sebagai template, yang nantinya akan digunakan untuk keperluan seperti activationCode atau resetPassword, yang nanti nya akan digunakan untuk aplikasi itu sendiri.* | 
 
 - #### Pkg
 | **Folder Name** | **Folder Status** | **Description**                                                                                                                                                                 |
