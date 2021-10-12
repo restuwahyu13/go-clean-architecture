@@ -1,7 +1,16 @@
 # Golang Clean Architecture (Maintenance)
 
-Berikut ini adalah folder structure pattern yang biasa saya gunakan, walaupun tidak semua nya saya terapkan dikarenakan project yang saya kerjakan
-hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertarik dengan pattern yang saya buat ini anda bisa menggunakan nya jika menurut anda baik.
+The following is a folder structure pattern that I usually use, although I don't use all of them because of the project I'm working on only small projects that are not too big, so if you are interested in the pattern I made, you can use it if you think it's good.
+
+## What are the benefits ?
+
+[x] Easy to maintance 
+[x] Easy to scalable you project
+[x] Readable code
+[x] Suitable for large projects or small projects
+[x] Easy to understand for junior or senior
+[x] Familiar structure folder for any developer 
+[x] And more
 
 ## Flow Diagram
 
