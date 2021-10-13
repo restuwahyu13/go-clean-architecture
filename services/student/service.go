@@ -11,13 +11,13 @@ func (s *service) Result(input *schemas.SchemaStudent) (*models.ModelStudent, sc
 	var student schemas.SchemaStudent
 	student.ID = input.ID
 
-	res, err := s.repository.ResultStudentRepository(&student)
+	res, err := s.repositoryResult.ResultStudentRepository(&student)
 	return res, err
 }
 
 func (s *service) ResultsStudentService() (*[]model.ModelStudent, schemas.SchemaDatabaseError) {
 
-	res, err := s.repository.ResultsStudentRepository()
+	res, err := s.repositoryResults.ResultsStudentRepository()
 	return res, err
 }
 
@@ -26,7 +26,7 @@ func (s *service) DeleteStudentService(input *schemas.SchemaStudent) (*models.Mo
 	var student schemas.SchemaStudent
 	student.ID = input.ID
 
-	res, err := s.repository.DeleteStudentRepository(&student)
+	res, err := s.repositoryDelete.DeleteStudentRepository(&student)
 	return res, err
 }
 
@@ -38,7 +38,7 @@ func (s *service) CreateStudentService(input *schemas.SchemaStudent) (*models.Mo
 	student.Fak = input.Fak
 	student.Bid = input.Bid
 
-	res, err := s.repository.CreateStudentRepository(&student)
+	res, err := s.repositoryCreate.CreateStudentRepository(&student)
 	return res, err
 }
 
@@ -51,6 +51,6 @@ func (s *service) UpdateStudentService(input *schemas.SchemaStudent) (*models.Mo
 	student.Fak = input.Fak
 	student.Bid = input.Fak
 
-	res, err := s.repository.UpdateStudentRepository(&student)
+	res, err := s.repositoryUpdate.UpdateStudentRepository(&student)
 	return res, err
 }

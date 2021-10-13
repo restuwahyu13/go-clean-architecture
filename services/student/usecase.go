@@ -1,6 +1,7 @@
 package student
 
 import (
+	repositorys "github.com/evermos/trial/go-clean-architecture/repositorys/student"
 	"github.com/restuwahyu13/gin-rest-api/models"
 	repositorys "github.com/restuwahyu13/gin-rest-api/repositorys/student"
 	"github.com/restuwahyu13/gin-rest-api/schemas"
@@ -15,9 +16,25 @@ type Service interface {
 }
 
 type service struct {
-	repository repositorys.RepositoryCreate
+	repositoryCreate  repositorys.RepositoryCreate
+	repositoryDelete  repositorys.RepositoryDelete
+	repositoryResult  repositorys.RepositoryResult
+	repositoryResults repositorys.RepositoryResults
+	repositoryUpdate  repositorys.RepositoryUpdate
 }
 
-func NewService(repository repositorys.RepositoryCreate) *serviceCreate {
-	return &serviceCreate{repository: repository}
+func NewService(
+	repositoryCreate repositorys.RepositoryCreate,
+	repositoryDelete repositorys.RepositoryDelete,
+	repositoryResult repositorys.RepositoryResult,
+	repositoryResults repositorys.RepositoryResults,
+	repositoryUpdate repositorys.RepositoryUpdate,
+) *service {
+	return &service{
+		repositoryCreate:  repositoryCreate,
+		repositoryDelete:  repositoryDelete,
+		repositoryResult:  repositoryResult,
+		repositoryResults: repositoryResults,
+		repositoryUpdate:  repositoryUpdate,
+	}
 }
