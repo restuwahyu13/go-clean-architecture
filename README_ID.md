@@ -1,6 +1,32 @@
-# Golang Clean Architecture (Maintenance)
+# Golang Clean Architecture
 
 Berikut ini adalah folder structure pattern yang biasa saya gunakan, walaupun tidak semua nya saya terapkan dikarenakan project yang saya kerjakan hanyalah project - project kecil yang tidak terlalu besar, jadi jika anda tertarik dengan pattern yang saya buat ini anda bisa menggunakan nya jika menurut anda baik.
+
+## Table Of Content
+
+- [What Are The Benefits](#what-are-the-benefits-)
+- [Flow Diagram](#flow-diagram)
+- [Folder Structure Pattern](#folder-structure-pattern)
+- [Folder Status And Description](#folder-status-and-description)
+   + [Test](#tests)
+   + [Docker](#docker)
+   + [Handlers](#handlers)
+   + [Repositorys](#repositorys)
+   + [Services](#services) 
+   + [Helpers](#helpers)
+   + [Middlewares](#middlewares)
+   + [Models](#models)
+   + [Routes](#routes)
+   + [Schemas](#schemas)
+   + [Templates](#templates)
+   + [Pkg](#pkg)
+   + [Scripts](#scripts)
+   + [Configs](#configs)
+   + [Cmd](#cmd)
+   + [Datbases](#databases)
+- [Command](#command)
+   + Application Lifecycle(#application-lifecycle)
+   + Docker Lifecycle(#docker-lifecycle)
 
 ## What Are The Benefits ?
 
@@ -8,7 +34,7 @@ Berikut ini adalah folder structure pattern yang biasa saya gunakan, walaupun ti
 - [x] Mudah diperbesar untuk project anda
 - [x] Mudah dibaca
 - [x] Cocok untuk project besar atau kecil
-- [x] Mudah dimegerti untuk junior atau senior
+- [x] Mudah dipahami untuk junior atau senior
 - [x] Dan lainnya
 
 ## Flow Diagram

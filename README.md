@@ -1,6 +1,32 @@
-# Golang Clean Architecture (Maintenance)
+# Golang Clean Architecture
 
 The following is a folder structure pattern that I usually use, although I don't use all of them because of the project I'm working on only small projects that are not too big, so if you are interested in the pattern I made, you can use it if you think it's good.
+
+## Table Of Content
+
+- [What Are The Benefits](#what-are-the-benefits-)
+- [Flow Diagram](#flow-diagram)
+- [Folder Structure Pattern](#folder-structure-pattern)
+- [Folder Status And Description](#folder-status-and-description)
+   + [Test](#tests)
+   + [Docker](#docker)
+   + [Handlers](#handlers)
+   + [Repositorys](#repositorys)
+   + [Services](#services) 
+   + [Helpers](#helpers)
+   + [Middlewares](#middlewares)
+   + [Models](#models)
+   + [Routes](#routes)
+   + [Schemas](#schemas)
+   + [Templates](#templates)
+   + [Pkg](#pkg)
+   + [Scripts](#scripts)
+   + [Configs](#configs)
+   + [Cmd](#cmd)
+   + [Datbases](#databases)
+- [Command](#command)
+   + Application Lifecycle(#application-lifecycle)
+   + Docker Lifecycle(#docker-lifecycle)
 
 ## What Are The Benefits ?
 
