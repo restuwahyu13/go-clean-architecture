@@ -78,8 +78,8 @@ The following is a folder structure pattern that I usually use, although I don't
 │   │     └── services.create.go
 │   │     └── services.create.go
 └── helpers
-│   └── helpers.apiResponse.go
-│   └── helpers.randomString.go.go
+│   └── helper.apiResponse.go
+│   └── helper.randomString.go.go
 └── middlewares
 │   └── middleware.auth.go
 │   └── middleware.role.go.go
@@ -100,8 +100,8 @@ The following is a folder structure pattern that I usually use, although I don't
 │   └── pkg.bcrypt.go
 │   └── pkg.cron.go
 └── scripts
-│   └── gcpRunner.sh
-│   └── awsRunner.sh
+│   └── script.gcpRunner.sh
+│   └── script.awsRunner.sh
 └── configs
 │   └── openapi.yml
 │   └── serverless.yml
@@ -113,14 +113,14 @@ The following is a folder structure pattern that I usually use, although I don't
 │   └── cron.emailBlast.go
 └── databases
 │   └── migrations
-│   │     └── migration.auth.go
-│   │     └── migration.student.go
+│   │     └── auth_20210913.go //generate auto by cli using third-party library
+│   │     └── student_20210913.go //generate auto by cli using third-party library
 │   └── seeds
-│   │     └── seed.auth.go
-│   │     └── seed.student.go
+│   │     └── auth.go //generate auto by cli using third-party library
+│   │     └── student_20210913.go //generate auto by cli using third-party library
 │   └── sql
-│   │     └── sql.auth.sql
-│   │     └── sql.student.sql
+│   │     └── database.auth.sql
+│   │     └── database.student.sql
 ```
 
 ## Folder Status And Description
