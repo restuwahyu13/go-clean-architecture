@@ -25,8 +25,8 @@ The following is a folder structure pattern that I usually use, although I don't
    + [Cmd](#cmd)
    + [Datbases](#databases)
 - [Command](#command)
-   + Application Lifecycle(#application-lifecycle)
-   + Docker Lifecycle(#docker-lifecycle)
+   + [Application Lifecycle ](#application-lifecycle)
+   + [Docker Lifecycle](#docker-lifecycle)
 
 ## What Are The Benefits ?
 
@@ -270,7 +270,7 @@ The following is a folder structure pattern that I usually use, although I don't
   ```sh
   $ docker-compose down | make dcd
   ```
-  
+
 <p align="right" style="padding: 5px; border-radius: 100%; background-color: red; font-size: 2rem;">
   <b><a href="#golang-clean-architecture">BACK TO TOP</a></b>
 </p>
