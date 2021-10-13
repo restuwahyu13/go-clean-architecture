@@ -113,11 +113,11 @@ Berikut ini adalah folder structure pattern yang biasa saya gunakan, walaupun ti
 │   └── cron.emailBlast.go
 └── databases
 │   └── migrations
-│   │     └── auth_20210913.go //generate auto by cli using third-party library
-│   │     └── student_20210913.go //generate auto by cli using third-party library
+│   │     └── auth_20210913.go //generate auto by cli using third party library
+│   │     └── student_20210913.go //generate auto by cli using third party library
 │   └── seeds
-│   │     └── auth.go //generate auto by cli using third-party library
-│   │     └── student_20210913.go //generate auto by cli using third-party library
+│   │     └── auth.go //generate auto by cli using third party library
+│   │     └── student_20210913.go //generate auto by cli using third party library
 │   └── sql
 │   │     └── database.auth.sql
 │   │     └── database.student.sql
