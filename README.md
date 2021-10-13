@@ -116,7 +116,7 @@ The following is a folder structure pattern that I usually use, although I don't
 │   │     └── auth_20210913.go //generate auto by cli using third party library
 │   │     └── student_20210913.go //generate auto by cli using third party library
 │   └── seeds
-│   │     └── auth.go //generate auto by cli using third party library
+│   │     └── auth_20210913.go //generate auto by cli using third party library
 │   │     └── student_20210913.go //generate auto by cli using third party library
 │   └── sql
 │   │     └── database.auth.sql
