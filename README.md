@@ -1,6 +1,6 @@
 # Golang Clean Architecture
 
-The following is a folder structure pattern that I usually use, although I don't use all of them because of the project I'm working on only small projects that are not too big, so if you are interested in the pattern I made, you can use it if you think it's good.
+The following is a folder structure pattern that I usually use, although I don't use all of them because of the project I'm working on only small projects that are not too big, so if you are interested in the pattern I made, you can use it if you think it's good, check this link for new update for this architecture [here](https://github.com/restuwahyu13/go-trakteer-api).
 
 ## Table Of Content
 
