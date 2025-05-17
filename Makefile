@@ -1,44 +1,41 @@
-#================================
-#== DOCKER ENVIRONMENT
-#================================
-COMPOSE := @docker-compose
+GO = @go
+NPM = @npm
+NODEMON = @nodemon
+DOCKER = @docker
+COMPOSE = @docker-compose
 
-dcb:
-	${COMPOSE} build
-
-dcuf:
-ifdef f
-	${COMPOSE} up -d --${f}
-endif
-
-dcubf:
-ifdef f
-	${COMPOSE} up -d --build --${f}
-endif
-
-dcu:
-	${COMPOSE} up -d --build
-
-dcd:
-	${COMPOSE} down
-
-#================================
-#== GOLANG ENVIRONMENT
-#================================
-GO := @go
-GIN := @gin
-
-goinstall:
+#################################
+# Application Territory
+#################################
+.PHONY: install
+install:
 	${GO} get .
+	${GO} mod verify
+	${NPM} i nodemon@latest -g
 
-godev:
-	${GIN} -a 4000 -p 3000 -b bin/main run main.go
+.PHONY: dev
+dev:
+	${NODEMON} -V -e .go,.env -w . -x go run ./cmd/api --count=1 --race -V --signal SIGTERM
 
-goprod:
-	${GO} build -o main .
+.PHONY: build
+build:
+	${GO} mod tidy
+	${GO} mod verify
+	${GO} vet --race -v .
+	${GO} build --race -v -o ${type} .
 
-gotest:
-	${GO} test -v ./..
+.PHONY: test
+test:
+	${GO} test -v ./domain/services/**
 
-goformat:
-	${GO} fmt ./...
+#################################
+# Docker Territory
+#################################
+build:
+	${DOCKER} build -t go-api:latest --compress .
+
+up:
+	${COMPOSE} up -d --remove-orphans --no-deps --build
+
+down:
+	${COMPOSE} down

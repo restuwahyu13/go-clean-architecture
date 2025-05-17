@@ -1,134 +1,66 @@
-version: '3.8'
 services:
-  ### ===================
-  ### APP SERVICE
-  ### ===================
-  app:
-    container_name: app
+  ### ===================================
+  ### API SERVICE TERITORY
+  ### ===================================
+  api:
+    container_name: go-api
     restart: always
     build:
       context: .
-      dockerfile: go/Dockerfile
+      dockerfile: external/deployments/Dockerfile
     healthcheck:
       interval: 120ms
-      retries: 5
       start_period: 60ms
-      test: |
-        touch /tmp/healthcheck.txt &&
-        mkdir /tmp/healthcheck &&
-        mv /tmp/healthcheck.txt /tmp/healthcheck &&
-        cd /tmp/healthcheck &&
-        echo "hello my docker container is working fine" >> healthcheck.txt &&
-        cat healthcheck.txt &&
-        rm healthcheck.txt &&
-        cd .. &&
-        rmdir /tmp/healthcheck
-        cls
-      timeout: 60ms
+      timeout: 30ms
+      retries: 3
+      test: env | grep $HOME
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - cache
+    ports:
+      - 3000:3000
+    networks:
+       - go-network
+  ### ===================================
+  ### DATABASE SERVICE TERITORY
+  ### ===================================
+  db:
+    image: postgres:14-alpine
+    restart: always
+    healthcheck:
+      interval: 120ms
+      start_period: 60ms
+      timeout: 30ms
+      retries: 3
+      test: env | grep $HOME
     env_file:
       - .env
     ports:
-      - 4000:4000
+      - 5432:5432
     networks:
-      - restapi_network
-    depends_on:
-      - db
-  ### ===================
-  ### DB SERVICE
-  ### ===================
-  db:
-    image: postgres:12-alpine
-    restart: always
-    healthcheck:
-      interval: 120ms
-      retries: 5
-      start_period: 60ms
-      test: |
-        touch /tmp/healthcheck.txt &&
-        mkdir /tmp/healthcheck &&
-        mv /tmp/healthcheck.txt /tmp/healthcheck &&
-        cd /tmp/healthcheck &&
-        echo "hello my docker container is working fine" >> healthcheck.txt &&
-        cat healthcheck.txt &&
-        rm healthcheck.txt &&
-        cd .. &&
-        rmdir /tmp/healthcheck
-        cls
-      timeout: 60ms
-    environment:
-      POSTGRES_DB: campus
-      POSTGRES_USER: restuwahyu13
-      POSTGRES_PASSWORD: restuwahyu13
-    ports:
-      - 5430:5432
-    volumes:
-      - pg-data:/var/lib/postgresql/data
-    networks:
-      - restapi_network
-  ### ===================
-  ### ADMINER SERVICE
-  ### ===================
-  panel:
-    image: adminer:latest
-    restart: always
-    healthcheck:
-      interval: 120ms
-      retries: 5
-      start_period: 60ms
-      test: |
-        touch /tmp/healthcheck.txt &&
-        mkdir /tmp/healthcheck &&
-        mv /tmp/healthcheck.txt /tmp/healthcheck &&
-        cd /tmp/healthcheck &&
-        echo "hello my docker container is working fine" >> healthcheck.txt &&
-        cat healthcheck.txt &&
-        rm healthcheck.txt &&
-        cd .. &&
-        rmdir /tmp/healthcheck
-        cls
-      timeout: 60ms
-    ports:
-      - 8080:8080
-    networks:
-      - restapi_network
-  ### ===================
-  ### SWAGGER SERVICE
-  ### ===================
-  doc:
-    build:
-      context: .
-      dockerfile: swagger/Dockerfile
-    restart: always
-    healthcheck:
-      interval: 120ms
-      retries: 5
-      start_period: 60ms
-      test: |
-        touch /tmp/healthcheck.txt &&
-        mkdir /tmp/healthcheck &&
-        mv /tmp/healthcheck.txt /tmp/healthcheck &&
-        cd /tmp/healthcheck &&
-        echo "hello my docker container is working fine" >> healthcheck.txt &&
-        cat healthcheck.txt &&
-        rm healthcheck.txt &&
-        cd .. &&
-        rmdir /tmp/healthcheck
-        cls
-      timeout: 60ms
-    environment:
-      - URL=http://localhost/openapi.yml
-      - SWAGGER_JSON=swagger/openapi.yml
-    ports:
-      - 80:8080
-    networks:
-      - restapi_network
-  ### ========================
-  ### VOLUMES PERSISTENT DATA
-  ### ========================
-volumes:
-  pg-data:
+       - go-network
   ### ===================================
-  ### NETWORKS GROUP FOR ONE SAME SERVICE
+  ### CACHING SERVICE TERITORY
+  ### ===================================
+  cache:
+    image: redis:7-alpine
+    restart: always
+    healthcheck:
+      interval: 120ms
+      start_period: 60ms
+      timeout: 30ms
+      retries: 3
+      test: env | grep $HOME
+    env_file:
+      - .env
+    ports:
+      - 6379:6379
+    networks:
+       - go-network
+  ### ===================================
+  ### NETWORKS SHARING GROUP TERITORY
   ### ===================================
 networks:
-  restapi_network:
+  go-network:

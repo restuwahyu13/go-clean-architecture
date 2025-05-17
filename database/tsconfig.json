@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"baseUrl": "database",
+		"outDir": "dist",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"moduleDetection": "auto",
+		"target": "ESNext",
+		"typeRoots": ["node_modules/@types/"],
+		"paths": {
+			"~/*": ["*"],
+		},
+		"strict": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"importHelpers": true,
+		"skipLibCheck": true,
+		"downlevelIteration": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"removeComments": true,
+		"allowJs": true,
+		"sourceMap": true,
+		"useDefineForClassFields":false,
+		"strictNullChecks": false,
+		"noImplicitAny": false,
+		"noImplicitReturns": false
+	}
+}

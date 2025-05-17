@@ -1,0 +1,37 @@
+{
+	"name": "migration",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Migration database",
+	"scripts": {
+		"ts-bin:prod": "tsc -P tsconfig.json",
+		"cleanup": "rimraf dist",
+		"build": "npm run cleanup && npm run ts-bin:prod"
+	},
+	"author": {
+		"name": "Restu Wahyu Saputra",
+		"url": "https://github.com/restuwahyu13"
+	},
+	"maintainers": [
+		"Restu Wahyu Saputra"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/restuwahyu13/go-shopping"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">= 20.x.x",
+		"npm": ">= 10.x.x"
+	},
+	"devDependencies": {
+		"bcrypt": "^6.0.0",
+		"dotenv": "^16.5.0",
+		"pg": "^8.13.3",
+		"rimraf": "^6.0.1",
+		"sequelize": "^6.37.5",
+		"sequelize-cli": "^6.6.3",
+		"tslib": "^2.8.1",
+		"typescript": "^5.6.3"
+	}
+}
